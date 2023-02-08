@@ -1,6 +1,5 @@
 ### IntelliJ IDEA ###
-!**/src/main/**/out/
-!**/src/test/**/out/
+/src/test/
 /src/r15/
 
 ### Eclipse ###
@@ -21,3 +20,4 @@ bin/
 /dist/
 /nbdist/
 /.nb-gradle/
+/.idea/
