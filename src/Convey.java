@@ -84,7 +84,7 @@ public class Convey {
 
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\glider.cell", 2);
+        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\glider.cell", 1);
         JFrame jFrame = new JFrame(title);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // setting close operation, field EXIT_ON_CLOSE is static
         jFrame.setResizable(false); // set if frame can be resizeable
