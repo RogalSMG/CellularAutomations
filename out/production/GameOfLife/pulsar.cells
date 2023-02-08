@@ -1,0 +1,17 @@
+!Nazwa: Pulsar
+!Autor: John Conway
+!Mimo rozmiaru to czwarty najczęściej występujący oscylator (i zdecydowanie najczęstszy o okresie większym niż 2).
+!www.conwaylife.com/wiki/index.php?title=Pulsar
+..OOO...OOO
+
+O....O.O....O
+O....O.O....O
+O....O.O....O
+..OOO...OOO
+
+..OOO...OOO
+O....O.O....O
+O....O.O....O
+O....O.O....O
+
+..OOO...OOO

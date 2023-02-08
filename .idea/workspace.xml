@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameOfLife.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/empty.cell" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/glider.cell" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pulsar.cells" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/r15/Automaton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/r15/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/r15/Conway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/r15/GridCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/r15/Langton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testTestIfOn" afterDir="false" />
-    </list>
+    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Convey" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +136,14 @@
       <option name="presentableId" value="Default" />
       <updated>1675786520256</updated>
     </task>
+    <task id="LOCAL-00001" summary="Convey">
+      <created>1675852534876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675852534876</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +156,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Convey" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convey" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
