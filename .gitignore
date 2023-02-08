@@ -1,6 +1,8 @@
 ### IntelliJ IDEA ###
 /src/test/
 /src/r15/
+/.idea/
+
 
 ### Eclipse ###
 .apt_generated
@@ -20,4 +22,3 @@ bin/
 /dist/
 /nbdist/
 /.nb-gradle/
-/.idea/
