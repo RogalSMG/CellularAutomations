@@ -1,5 +1,8 @@
 import java.awt.*;
 
+/**
+ * Class represent single cell
+ */
 public class Cell {
     public static final Color[] COLORS = {Color.WHITE, Color.BLACK};
     private final int x;
@@ -7,6 +10,12 @@ public class Cell {
     private final int size;
     private int state;
 
+    /**
+     * Constructor initialize new Cell obj with specified x and y coordination's and size. Default is turn off
+     * @param x coordination x
+     * @param y coordination y
+     * @param size pixel number
+     */
     public Cell(int x, int y, int size) {
         this.x = x;
         this.y = y;

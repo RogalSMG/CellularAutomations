@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Convey">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patterns/glider.rle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patterns/gosperGliderGun.rle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/glider.cell" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/glider.cell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/empty.cell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/glider.cell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/pulsar.cells" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/GameOfLife/GridCanvasTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/GameOfLife/GridCanvasTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/GameOfLife/testTestIfOn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/glider.cell" beforeDir="false" afterPath="$PROJECT_DIR$/src/glider.cell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/empty.cell" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/empty.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/glider.cell" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/glider.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pulsar.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/pulsar.cells" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/GridCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testTestIfOn" beforeDir="false" afterPath="$PROJECT_DIR$/test/testTestIfOn.cell" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +78,14 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Developer Start\Java Projekty\GameOfLife\src\patterns" />
       <recent name="E:\Developer Start\Java Projekty\GameOfLife\src" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridCanvasTest.testCountNeight">
+  <component name="RunManager" selected="Application.Convey">
     <configuration name="Convey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Convey" />
       <module name="GameOfLife" />
@@ -98,12 +106,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridCanvasTest.countAlive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GridCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GridCanvasTest" />
-      <option name="METHOD_NAME" value="countAlive" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="Application.Convey" />
+        <item itemvalue="JUnit.GridCanvasTest" />
+        <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="JUnit.GridCanvasTest.testTestIfOn" />
         <item itemvalue="Application.Conway" />
-        <item itemvalue="JUnit.GridCanvasTest.countAlive" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675853115663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Convey">
+      <created>1675854210152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675854210152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,24 +215,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Convey" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GridCanvas.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GridCanvas.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/GridCanvasTest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="153">
+        <watch expression="counts" language="JAVA" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>

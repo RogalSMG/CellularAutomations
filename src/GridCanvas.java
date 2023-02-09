@@ -68,6 +68,8 @@ public class GridCanvas extends Canvas {
                 return 1;
             }
         } catch (IndexOutOfBoundsException e) {
+
+            // exception holding which allow to go through grid borders,
             int newR = r;
             int newC = c;
             if (r < 0) {
@@ -77,11 +79,11 @@ public class GridCanvas extends Canvas {
             }
 
             if (c < 0) {
-                newC = grid[0].length;
+                newC = grid[0].length - 1;
             } else if (c == grid[0].length) {
                 newC = 0;
             }
-            return testIfOn(newR,newC);
+            return testIfOn(newR, newC);
 
         }
         return 0;
@@ -89,6 +91,7 @@ public class GridCanvas extends Canvas {
 
     /**
      * Method count alive neighbourhood of specified cell
+     *
      * @param r index of row
      * @param c index of column
      * @return number of alive Cell around specified by r and c
@@ -106,12 +109,17 @@ public class GridCanvas extends Canvas {
         return count;
     }
 
+    /**
+     * Method count all alive cells
+     *
+     * @return number of alive cells
+     */
     public int countAlive() {
         int count = 0;
         for (Cell[] rows : grid) {
             for (Cell cell : rows) {
                 if (cell.isOn()) {
-                    count += 1 ;
+                    count += 1;
                 }
             }
         }

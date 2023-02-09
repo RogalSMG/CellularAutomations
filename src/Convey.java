@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Convey {
-    private GridCanvas grid;
+    private final GridCanvas grid;
 
     public Convey() {
         grid = new GridCanvas(30, 25, 20);
@@ -21,32 +21,21 @@ public class Convey {
     }
 
     /**
-     * Getter
-     * @return this.grid
-     */
-    public GridCanvas getGrid() {
-        return grid;
-    }
-
-    /**
-     * Convey constructor allow to read patterns:
+     * Convey constructor allow to create :
      * O - Alive cells
      * . - dead cells
      *
-     * @param path of file
+     * @param path   of file
      * @param margin amount of cell around given pattern
      */
     public Convey(String path, int margin) {
 
-        // load text file
-        File file = new File(path);
-        Scanner scan;
-        try {
-            scan = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
+        if (path.endsWith("rle")) {
+            rleConvey(path);
         }
+
+        // load file to scanner
+        Scanner scan = loadFile(path);
 
         // read text file to array
         ArrayList<String> list = new ArrayList<>();
@@ -82,9 +71,13 @@ public class Convey {
         }
     }
 
+    private void rleConvey(String path) {
+
+    }
+
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\glider.cell", 1);
+        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\glider.cells", 1);
         JFrame jFrame = new JFrame(title);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // setting close operation, field EXIT_ON_CLOSE is static
         jFrame.setResizable(false); // set if frame can be resizeable
@@ -115,6 +108,30 @@ public class Convey {
     }
 
     /**
+     * Getter
+     *
+     * @return this.grid
+     */
+    public GridCanvas getGrid() {
+        return grid;
+    }
+
+    /**
+     * Load text file
+     */
+    private Scanner loadFile(String path) {
+        File file = new File(path);
+        Scanner scan;
+        try {
+            scan = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return scan;
+    }
+
+    /**
      * Standard method which contain steps of game
      */
     private void mainLoop() {
@@ -122,7 +139,7 @@ public class Convey {
             this.update();
             grid.repaint();
             try {
-                Thread.sleep(500);
+                Thread.sleep(250);
             } catch (InterruptedException e) {
                 // handling not necessary
             }

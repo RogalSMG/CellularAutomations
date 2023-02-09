@@ -57,7 +57,7 @@ class GridCanvasTest {
                 () -> assertEquals(2,convey.getGrid().countNeight(0,3)),
                 () -> assertEquals(2,convey.getGrid().countNeight(0,4)),
                 () -> assertEquals(2,convey.getGrid().countNeight(4,5)),
-                () -> assertEquals(4,convey.getGrid().countNeight(1,0)),
+                () -> assertEquals(3,convey.getGrid().countNeight(1,0)),
                 () -> assertEquals(3,convey.getGrid().countNeight(1,1))
         );
     }
