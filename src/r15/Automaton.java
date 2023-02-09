@@ -23,7 +23,7 @@ public abstract class Automaton {
      * @param title tytuł ramki
      * @param rate liczba kroków na sekundę
      */
-    public void run(String title, int rate) {
+    public void run(String title, double rate) {
         // ustaw ramkę okna
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,7 +39,7 @@ public abstract class Automaton {
      * 
      * @param rate liczba kroków na sekundę
      */
-    private void mainloop(int rate) {
+    private void mainloop(double rate) {
         while (true) {
 
             // zaktualizuj rysunek
@@ -48,7 +48,7 @@ public abstract class Automaton {
 
             // opóźnij symulację
             try {
-                Thread.sleep(1000 / rate);
+                Thread.sleep((long) (1000 / rate));
             } catch (InterruptedException e) {
                 // nie rób nic
             }

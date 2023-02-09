@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Convey">
-      <change afterPath="$PROJECT_DIR$/src/patterns/glider.rle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/gosperGliderGun.rle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patterns/XD.cells" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patterns/diamond.cells" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/empty.cell" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/glider.cell" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/pulsar.cells" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/GameOfLife/GridCanvasTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/GameOfLife/GridCanvasTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Automaton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/r15/Automaton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Conway.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/r15/Conway.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Langton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/r15/Langton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/empty.cell" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/empty.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/glider.cell" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/glider.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pulsar.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/pulsar.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GridCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/empty.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/empty.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/glider.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/glider.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/glider.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/glider.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/r15/Automaton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/r15/Automaton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/r15/Conway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/r15/Conway.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,10 +136,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Convey" />
+        <item itemvalue="Application.Conway" />
         <item itemvalue="JUnit.GridCanvasTest" />
         <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="JUnit.GridCanvasTest.testTestIfOn" />
-        <item itemvalue="Application.Conway" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675854210152</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Convey">
+      <created>1675939172044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675939172044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,9 +221,15 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="153">
-        <watch expression="counts" language="JAVA" />
+      <configuration name="Application">
+        <watch expression="grid" language="JAVA" />
+      </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="215">
+        <watch expression="list" language="JAVA" />
       </inline-watch>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GameOfLife$Convey.ic" NAME="Convey Coverage Results" MODIFIED="1675952079258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

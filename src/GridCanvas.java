@@ -2,6 +2,15 @@ import java.awt.*;
 
 public class GridCanvas extends Canvas {
     private Cell[][] grid;
+    private boolean goThroughBorder;
+
+    public boolean isGoThroughBorder() {
+        return goThroughBorder;
+    }
+
+    public void setGoThroughBorder(boolean goThroughBorder) {
+        this.goThroughBorder = goThroughBorder;
+    }
 
     /**
      * fill two dimension Array with Cell objects
@@ -11,6 +20,7 @@ public class GridCanvas extends Canvas {
      * @param size size of each cell
      */
     public GridCanvas(int rows, int cols, int size) {
+        this.goThroughBorder = false;
         this.grid = new Cell[rows][cols];
         for (int r = 0; r < rows; r++) {
             int y = r * size;
@@ -68,23 +78,23 @@ public class GridCanvas extends Canvas {
                 return 1;
             }
         } catch (IndexOutOfBoundsException e) {
+            if (goThroughBorder) {
+                // exception holding which allow to go through grid borders,
+                int newR = r;
+                int newC = c;
+                if (r < 0) {
+                    newR = grid.length - 1;
+                } else if (r == grid.length) {
+                    newR = 0;
+                }
 
-            // exception holding which allow to go through grid borders,
-            int newR = r;
-            int newC = c;
-            if (r < 0) {
-                newR = grid.length - 1;
-            } else if (r == grid.length) {
-                newR = 0;
+                if (c < 0) {
+                    newC = grid[0].length - 1;
+                } else if (c == grid[0].length) {
+                    newC = 0;
+                }
+                return testIfOn(newR, newC);
             }
-
-            if (c < 0) {
-                newC = grid[0].length - 1;
-            } else if (c == grid[0].length) {
-                newC = 0;
-            }
-            return testIfOn(newR, newC);
-
         }
         return 0;
     }

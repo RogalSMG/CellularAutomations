@@ -173,8 +173,8 @@ public class Conway extends Automaton {
      */
     public static void main(String[] args) {
         String title = "Gra w życie autorstwa Conwaya";
-        Conway game = new Conway("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\r15\\pulsar.cells", 3);
-        game.run(title, 2);
+        Conway game = new Conway("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\empty.cells", 3);
+        game.run(title, 0.5);
     }
 
 }
