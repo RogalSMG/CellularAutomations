@@ -10,15 +10,15 @@ public class Langton extends Automat {
      * @param cols number of columns
      */
     public Langton(int rows, int cols) {
-        grid = new GridCanvas(rows, cols, 10);
+        grid = new GridCanvas(rows, cols, 20);
         this.xpos = rows / 2;
         this.ypos = cols / 2;
         head = 0;
     }
 
     public static void main(String[] args) {
-        Langton langton = new Langton(10, 10);
-        langton.run("Ant", 2);
+        Langton langton = new Langton(20, 20);
+        langton.run("Ant", 100);
     }
 
     /**
@@ -38,10 +38,10 @@ public class Langton extends Automat {
         Cell cell = grid.getCell(ypos, xpos);
         if (cell.isOff()) {
             cell.turnOn();
-            head = (head + 1) % 4; // change
+            head = (head + 1) % 4; // turn right
         } else if (cell.isOn()) {
             cell.turnOff();
-            head = (head + 3) % 4;
+            head = (head + 3) % 4; // turn left
         }
     }
 
@@ -51,14 +51,21 @@ public class Langton extends Automat {
      */
     private void moveAnt() {
         if (head == 0) {
-
-            ypos--;
+            if (ypos != 0) {
+                ypos--;
+            }
         } else if (head == 1) {
-            xpos++;
+            if (xpos != grid.numColumns() - 1) {
+                xpos++;
+            }
         } else if (head == 2) {
-            ypos++;
+            if (ypos != grid.numRows() - 1) {
+                ypos++;
+            }
         } else {
-            xpos--;
+            if (xpos != 0) {
+                xpos--;
+            }
         }
     }
 }

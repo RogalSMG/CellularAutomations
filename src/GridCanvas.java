@@ -1,16 +1,9 @@
 import java.awt.*;
+import java.util.Random;
 
 public class GridCanvas extends Canvas {
     private final Cell[][] grid;
     private boolean goThroughBorder = false;
-
-    /**
-     * Setter method for {@code goThroughBorder} field
-     * @param goThroughBorder boolean value to set {@code goThroughBorder}
-     */
-    public void setGoThroughBorder(boolean goThroughBorder) {
-        this.goThroughBorder = goThroughBorder;
-    }
 
     /**
      * Method fill two dimension Array with cell objects
@@ -29,6 +22,15 @@ public class GridCanvas extends Canvas {
             }
         }
         setSize(cols * size, rows * size); // set size of canvas -> płótno
+    }
+
+    /**
+     * Setter method for {@code goThroughBorder} field
+     *
+     * @param goThroughBorder boolean value to set {@code goThroughBorder}
+     */
+    public void setGoThroughBorder(boolean goThroughBorder) {
+        this.goThroughBorder = goThroughBorder;
     }
 
     /**
@@ -58,6 +60,21 @@ public class GridCanvas extends Canvas {
     }
 
     /**
+     * Fill whole grid randomly with cells with state 0 or 1
+     */
+    public void randomTurning01() {
+        Random r = new Random();
+        for (Cell[] row : grid) {
+            for (Cell cell : row) {
+                int state = r.nextInt(0, 2);
+                if (state == 1) {
+                    cell.turnOn();
+                }
+            }
+        }
+    }
+
+    /**
      * @param g the specified Graphics context
      */
     public void paint(Graphics g) {
@@ -65,7 +82,7 @@ public class GridCanvas extends Canvas {
     }
 
     /**
-     * method check if cell under specified parameters is on
+     * Method check if cell under specified parameters is on
      *
      * @param r index of row
      * @param c index of column

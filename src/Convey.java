@@ -1,26 +1,26 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Convey extends Automat {
 
+    /**
+     * Standard constructor where default all cells are turn off, they can be turned on by hardCoding
+     */
     public Convey() {
         grid = new GridCanvas(30, 25, 20);
-        grid.turnOn(1, 2);
-        grid.turnOn(2, 2);
-        grid.turnOn(3, 2);
-        grid.turnOn(6, 1);
-        grid.turnOn(7, 2);
-        grid.turnOn(7, 3);
-        grid.turnOn(8, 1);
-        grid.turnOn(8, 2);
+        grid.randomTurning01();
     }
 
     /**
      * Convey constructor allow to create :
-     * O - Alive cells
+     * <p>
+     * O - Alive cells <p>
      * . - dead cells
+     * </p>
+     * handle .cells and .rle extensions. Encode rle and map to .cells format
      *
      * @param path   of file
      * @param margin amount of cell around given pattern
@@ -35,7 +35,8 @@ public class Convey extends Automat {
 
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\testing.rle", 1);
+        Convey game = new Convey();
+        //Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\testing.rle", 1);
         game.grid.setGoThroughBorder(false);
         game.run(title, 6);
     }

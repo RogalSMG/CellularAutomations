@@ -5,29 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Langton">
-      <change afterPath="$PROJECT_DIR$/src/Automat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/151P3H1V0.rle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/233P3H1V0.rle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/testing.rle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ConveyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Automaton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Conway.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/GridCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/r15/Langton.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/glider.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/glider.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/gosperGliderGun.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/gosperGliderGun.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/r15/Automaton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/r15/Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/r15/Conway.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/r15/GridCanvas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/r15/Langton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Langton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConveyTest.isNumber">
+  <component name="RunManager" selected="Application.Langton">
     <configuration name="Convey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Convey" />
       <module name="GameOfLife" />
@@ -141,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConveyTest.isNumber" />
-        <item itemvalue="Application.Convey" />
         <item itemvalue="Application.Langton" />
+        <item itemvalue="Application.Convey" />
+        <item itemvalue="JUnit.ConveyTest.isNumber" />
         <item itemvalue="Application.Conway" />
         <item itemvalue="JUnit.GridCanvasTest" />
       </list>
@@ -214,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675967185896</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Langton">
+      <created>1676307455873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676307455873</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,11 +225,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="Langton" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="grid" language="JAVA" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="223">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="224">
         <watch expression="list" language="JAVA" />
       </inline-watch>
     </watches-manager>
