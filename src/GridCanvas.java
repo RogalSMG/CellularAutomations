@@ -1,26 +1,25 @@
 import java.awt.*;
 
 public class GridCanvas extends Canvas {
-    private Cell[][] grid;
-    private boolean goThroughBorder;
+    private final Cell[][] grid;
+    private boolean goThroughBorder = false;
 
-    public boolean isGoThroughBorder() {
-        return goThroughBorder;
-    }
-
+    /**
+     * Setter method for {@code goThroughBorder} field
+     * @param goThroughBorder boolean value to set {@code goThroughBorder}
+     */
     public void setGoThroughBorder(boolean goThroughBorder) {
         this.goThroughBorder = goThroughBorder;
     }
 
     /**
-     * fill two dimension Array with Cell objects
+     * Method fill two dimension Array with cell objects
      *
      * @param rows number of rows
      * @param cols number of columns
      * @param size size of each cell
      */
     public GridCanvas(int rows, int cols, int size) {
-        this.goThroughBorder = false;
         this.grid = new Cell[rows][cols];
         for (int r = 0; r < rows; r++) {
             int y = r * size;
@@ -52,7 +51,7 @@ public class GridCanvas extends Canvas {
      */
     public void drawForEach(Graphics g) {
         for (Cell[] row : grid) { // take array of each row of two dimension table
-            for (Cell cell : row) { // take Cell of each index of array
+            for (Cell cell : row) { // take cell of each index of array
                 cell.draw(g); // draw each cell
             }
         }
@@ -79,7 +78,7 @@ public class GridCanvas extends Canvas {
             }
         } catch (IndexOutOfBoundsException e) {
             if (goThroughBorder) {
-                // exception holding which allow to go through grid borders,
+                // exception handler which allow to go through grid borders,
                 int newR = r;
                 int newC = c;
                 if (r < 0) {

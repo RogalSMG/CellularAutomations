@@ -1,11 +1,9 @@
-import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Convey {
-    private GridCanvas grid;
+public class Convey extends Automat {
 
     public Convey() {
         grid = new GridCanvas(30, 25, 20);
@@ -28,7 +26,6 @@ public class Convey {
      * @param margin amount of cell around given pattern
      */
     public Convey(String path, int margin) {
-
         if (path.endsWith("rle")) {
             rleConvey(path, margin);
         } else {
@@ -38,14 +35,9 @@ public class Convey {
 
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\glider.rle", 0);
-        JFrame jFrame = new JFrame(title);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // setting close operation, field EXIT_ON_CLOSE is static
-        jFrame.setResizable(false); // set if frame can be resizeable
-        jFrame.add(game.grid); // add canvas to frame
-        jFrame.pack(); // set frame size to be able to hold canvas
-        jFrame.setVisible(true); // set if window have to be visible
-        game.mainLoop(0.5);
+        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\testing.rle", 1);
+        game.grid.setGoThroughBorder(false);
+        game.run(title, 6);
     }
 
     /**
@@ -69,6 +61,23 @@ public class Convey {
     }
 
     /**
+     * Helper method which take string and return int value made of all digits inside given string
+     *
+     * @param str given string
+     * @return int value made of {@code str} parameter
+     */
+    private int leftOnlyDigits(String str) {
+        char[] arr = str.toCharArray();
+        StringBuilder builder = new StringBuilder();
+        for (char ch : arr) {
+            if (Character.isDigit(ch)) {
+                builder.append(ch);
+            }
+        }
+        return Integer.parseInt(builder.toString());
+    }
+
+    /**
      * Method read .rle extension and transform it to .cells
      *
      * @param path   of file
@@ -88,7 +97,7 @@ public class Convey {
             } else prefixList.add(line);
         }
 
-        // set dimensions
+        // set dimensions, dimensions are provided in first line of file
         String line = list.get(0);
         String[] firstLine = line.split(" ");
         int width = 0;
@@ -96,12 +105,11 @@ public class Convey {
 
         for (int j = 0; j < firstLine.length; ) {
             if (firstLine[j].equals("x")) {
-                String firstInt = firstLine[j + 2];
-                width = Integer.parseInt(firstInt.substring(0, firstInt.length() - 1));
+                width = leftOnlyDigits(firstLine[j + 2]);
                 j = 3;
             }
             if (firstLine[j].equals("y")) {
-                height = Integer.parseInt(firstLine[j + 2]);
+                height = leftOnlyDigits(firstLine[j + 2]);
                 break;
             }
         }
@@ -137,7 +145,7 @@ public class Convey {
                     }
                 }
                 case '!' -> {
-                    break;
+                    break; // prevent from reading after exclamation mark
                 }
                 case '$' -> {
                     lineNumber++;
@@ -159,21 +167,21 @@ public class Convey {
      * Helper method in decoding RLE
      *
      * @param code string of code
-     * @param i index of number which precede last funded o or b
+     * @param i    index of number which precede last funded o or b
      * @return integer value of number
      */
-    public int isNumber(StringBuilder code, int i) {
-        int count = 0; // first founded number before this method was called
-        while (Character.isDigit(code.charAt(i - 1))) {
+    protected int isNumber(StringBuilder code, int i) {
+        int count = 0;
+        int temp = i;
+        while (temp != 0 && Character.isDigit(code.charAt(temp - 1))) {
             count++;
-            i--;
+            temp--;
         }
-
         return Integer.parseInt(code.substring(i - count, i + 1));
     }
 
     /**
-     * Method read coordination,s of cells from .cells extension files
+     * Method read coordination's of cells from .cells extension files
      *
      * @param path   of file
      * @param margin given margin
@@ -251,32 +259,9 @@ public class Convey {
     }
 
     /**
-     * Standard method which contain steps of game
-     */
-    private void mainLoop(double rate) {
-        grid.repaint();
-        try {
-            Thread.sleep((long) (1000 / rate));
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        while (true) {
-            this.update();
-            grid.repaint();
-            try {
-                Thread.sleep((long) (1000 / rate));
-            } catch (InterruptedException e) {
-                // handling not necessary
-            }
-
-        }
-    }
-
-    /**
      * Method simulate one round of Game of life
      */
-    private void update() {
+    public void update() {
         int[][] counts = countNeighbors();
         updateGrid(counts);
     }
