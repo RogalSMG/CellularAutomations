@@ -10,32 +10,32 @@ public class Convey extends Automat {
      */
     public Convey() {
         grid = new GridCanvas(30, 25, 20);
-        grid.randomSetState(0,2);
+        grid.randomSetState(0, 2);
     }
 
     /**
-     * Convey constructor allow to create :
-     * <p>
-     * O - Alive cells <p>
-     * . - dead cells
-     * </p>
-     * handle .cells and .rle extensions. Encode rle and map to .cells format
+     * Convey constructor handle .cells and .rle extensions. Encode rle and map to .cells format
      *
      * @param path   of file
      * @param margin amount of cell around given pattern
      */
-    public Convey(String path, int margin) {
+    public Convey(String path, int margin, int size) {
         if (path.endsWith("rle")) {
-            rleConvey(path, margin);
+            rleConvey(path, margin, size);
         } else {
-            cellsConvey(path, margin);
+            cellsConvey(path, margin, size);
         }
     }
 
+    /**
+     * Create and run simulation
+     *
+     * @param args command prompt argument
+     */
     public static void main(String[] args) {
         String title = "Game Of Life";
         Convey game = new Convey();
-        //Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\patterns\\testing.rle", 1);
+        //Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\conveyPatterns\\testing.rle", 1);
         game.grid.setGoThroughBorder(false);
         game.run(title, 6);
     }
@@ -83,13 +83,13 @@ public class Convey extends Automat {
      * @param path   of file
      * @param margin additional cells around pattern
      */
-    private void rleConvey(String path, int margin) {
+    private void rleConvey(String path, int margin, int size) {
         Scanner scan = loadFile(path); // load file to scanner
 
         ArrayList<String> list = new ArrayList<>();
-        ArrayList<String> prefixList = new ArrayList<>();
+        ArrayList<String> prefixList = new ArrayList<>(); // in future to do sth with #tags
 
-        // read text file to array
+        // read text file to arrays
         while (scan.hasNextLine()) {
             String line = scan.nextLine();
             if (!line.startsWith("#")) {
@@ -97,7 +97,7 @@ public class Convey extends Automat {
             } else prefixList.add(line);
         }
 
-        // set dimensions, dimensions are provided in first line of file
+        // set dimensions which are provided in first line of file
         String line = list.get(0);
         String[] firstLine = line.split(" ");
         int width = 0;
@@ -105,7 +105,7 @@ public class Convey extends Automat {
 
         for (int j = 0; j < firstLine.length; ) {
             if (firstLine[j].equals("x")) {
-                width = leftOnlyDigits(firstLine[j + 2]);
+                width = leftOnlyDigits(firstLine[j + 2]); // coding "x = 12," number always precede "x" by 2
                 j = 3;
             }
             if (firstLine[j].equals("y")) {
@@ -128,38 +128,38 @@ public class Convey extends Automat {
             char ch = builder.charAt(i);
             int amount = 1;
             switch (ch) {
-                case 'b' -> {
-                    if (i != 0 && Character.isDigit(builder.charAt(i - 1))) {
+                case 'b' -> { // dead cells
+                    if (i != 0 && Character.isDigit(builder.charAt(i - 1))) { // check how many cells in a row have to be dead
                         amount = isNumber(builder, i - 1);
                     }
                     for (int j = 0; j < amount; j++) {
-                        encoding.get(lineNumber).append(".");
+                        encoding.get(lineNumber).append("."); // add appropriate amount of "." to specified line
                     }
                 }
                 case 'o' -> {
-                    if (i != 0 && Character.isDigit(builder.charAt(i - 1))) {
+                    if (i != 0 && Character.isDigit(builder.charAt(i - 1))) { // check how many cells in a row hate to be alive
                         amount = isNumber(builder, i - 1);
                     }
                     for (int j = 0; j < amount; j++) {
-                        encoding.get(lineNumber).append("O");
+                        encoding.get(lineNumber).append("O"); // add appropriate amount of "O" to specified line
                     }
                 }
                 case '!' -> {
                     break; // prevent from reading after exclamation mark
                 }
                 case '$' -> {
-                    lineNumber++;
-                    encoding.add(new StringBuilder());
+                    lineNumber++; // $ char means new line
+                    encoding.add(new StringBuilder()); // new stringBuilder object added to encoding ArrayList obj
                 }
             }
         }
 
-        ArrayList<String> encoded = new ArrayList<>();
+        ArrayList<String> encoded = new ArrayList<>(); // convert StringBuilder ArrayList to String ArrayList
         for (StringBuilder sb : encoding) {
             encoded.add(sb.toString());
         }
 
-        grid = new GridCanvas(height + margin * 2, width + margin * 2, 20);
+        grid = new GridCanvas(height + margin * 2, width + margin * 2, size); // create grid
         turnOnCells(encoded, margin);
     }
 
@@ -167,7 +167,7 @@ public class Convey extends Automat {
      * Helper method in decoding RLE
      *
      * @param code string of code
-     * @param i index of number which precede last funded o or b
+     * @param i    index of number which precede last funded o or b
      * @return integer value of number
      */
     protected int isNumber(StringBuilder code, int i) {
@@ -181,12 +181,18 @@ public class Convey extends Automat {
     }
 
     /**
-     * Method read coordination's of cells from .cells extension files
+     * Method read coordination's of cells from .cells extension files.
+     * Allow to create grid using following pattern:
+     * <p>
+     * O - Alive cells
+     * <p>
+     * . - dead cells
+     * <p>
      *
      * @param path   of file
      * @param margin given margin
      */
-    private void cellsConvey(String path, int margin) {
+    private void cellsConvey(String path, int margin, int size) {
         Scanner scan = loadFile(path);
 
         // read text file to array
@@ -207,7 +213,7 @@ public class Convey extends Automat {
                 width = str.length();
             }
         }
-        grid = new GridCanvas(height + margin * 2, width + margin * 2, 20);
+        grid = new GridCanvas(height + margin * 2, width + margin * 2, size);
 
         turnOnCells(list, margin);
     }
@@ -244,7 +250,9 @@ public class Convey extends Automat {
     }
 
     /**
-     * Load text file
+     * Helper method which load file to {@code Scanner} object
+     * @param path given path of file to read
+     * @return Scanner with loaded file
      */
     private Scanner loadFile(String path) {
         File file = new File(path);

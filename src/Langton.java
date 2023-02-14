@@ -16,6 +16,10 @@ public class Langton extends Automat {
         head = 0;
     }
 
+    /**
+     * Create and run simulation
+     * @param args command prompt argument
+     */
     public static void main(String[] args) {
         Langton langton = new Langton(8, 8);
         langton.run("Ant", 10);

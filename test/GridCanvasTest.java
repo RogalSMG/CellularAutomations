@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;;
 class GridCanvasTest {
 
     GridCanvas gridCanvas = new GridCanvas(10, 10, 20);
-    Convey convey = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\test\\testTestIfOn.cell", 0);
+    Convey convey = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\test\\testTestIfOn.cell", 0, 20);
 
     @BeforeAll
     static void beforeAll() {

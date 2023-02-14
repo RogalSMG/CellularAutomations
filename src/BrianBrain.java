@@ -19,7 +19,7 @@ public static Color[] COLORS = {Color.WHITE, Color.BLACK, Color.GRAY}; // new se
      */
     public BrianBrain(int rows, int cols) {
         Cell.setCOLORS(COLORS);
-        grid = new GridCanvas(rows, cols, 20);
+        grid = new GridCanvas(rows, cols, 5);
         grid.setGoThroughBorder(true);
         grid.randomSetState(0, 3);
     }
@@ -29,7 +29,7 @@ public static Color[] COLORS = {Color.WHITE, Color.BLACK, Color.GRAY}; // new se
      * @param args command prompt argument
      */
     public static void main(String[] args) {
-        BrianBrain brianBrain = new BrianBrain(53,98);
+        BrianBrain brianBrain = new BrianBrain(150,294);
         brianBrain.run("Brian Game", 5);
 
     }
