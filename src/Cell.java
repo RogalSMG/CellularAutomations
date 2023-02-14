@@ -4,33 +4,17 @@ import java.awt.*;
  * Class represent single cell
  */
 public class Cell {
-    public static Color[] COLORS = {Color.WHITE, Color.BLACK};
+    private static Color[] COLORS = {Color.WHITE, Color.BLACK};
     private final int x;
     private final int y;
     private final int size;
-
-    /**
-     * Setter for state field
-     * @param state given state to set
-     */
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    /**
-     * Setter for colors
-     * @param COLORS color to set
-     */
-    public static void setCOLORS(Color[] COLORS) {
-        Cell.COLORS = COLORS;
-    }
-
     private int state;
 
     /**
      * Constructor initialize new Cell obj with specified x and y coordination's and size. Default is turn off
-     * @param x coordination x
-     * @param y coordination y
+     *
+     * @param x    coordination x
+     * @param y    coordination y
      * @param size pixel number
      */
     public Cell(int x, int y, int size) {
@@ -41,7 +25,17 @@ public class Cell {
     }
 
     /**
+     * Setter for colors
+     *
+     * @param COLORS color to set
+     */
+    public static void setCOLORS(Color[] COLORS) {
+        Cell.COLORS = COLORS;
+    }
+
+    /**
      * Method check if this cell is alive (state 1)
+     *
      * @return true if is alive, else false
      */
     public boolean isOn() {
@@ -50,6 +44,7 @@ public class Cell {
 
     /**
      * Method check if this cell is dead (state 0)
+     *
      * @return true if is dead, else true
      */
     public boolean isOff() {
@@ -79,6 +74,7 @@ public class Cell {
 
     /**
      * Method check if cell is in dying phase (state 2)
+     *
      * @return true if state is 2, otherwise false
      */
     public boolean isDying() {
@@ -87,6 +83,7 @@ public class Cell {
 
     /**
      * Method draw cell
+     *
      * @param g Graphic class
      */
     public void draw(Graphics g) {
@@ -98,9 +95,19 @@ public class Cell {
 
     /**
      * Getter for state field
+     *
      * @return this.state
      */
     public int getState() {
         return this.state;
+    }
+
+    /**
+     * Setter for state field
+     *
+     * @param state given state to set
+     */
+    public void setState(int state) {
+        this.state = state;
     }
 }

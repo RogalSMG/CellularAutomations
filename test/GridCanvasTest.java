@@ -39,12 +39,12 @@ class GridCanvasTest {
     @Test
     void testTestIfOn() {
         assertAll(
-                () -> assertEquals(1, convey.getGrid().testIfOn(0, 0, 1)),
-                () -> assertEquals(1, convey.getGrid().testIfOn(0, 2, 1)),
-                () -> assertEquals(1, convey.getGrid().testIfOn(1, 5, 1)),
-                () -> assertEquals(1, convey.getGrid().testIfOn(0, 0, 1)),
-                () -> assertEquals(1, convey.getGrid().testIfOn(4, 5, 1)),
-                () -> assertEquals(0, convey.getGrid().testIfOn(0, 1, 1))
+                () -> assertEquals(1, convey.getGrid().checkState(0, 0, 1)),
+                () -> assertEquals(1, convey.getGrid().checkState(0, 2, 1)),
+                () -> assertEquals(1, convey.getGrid().checkState(1, 5, 1)),
+                () -> assertEquals(1, convey.getGrid().checkState(0, 0, 1)),
+                () -> assertEquals(1, convey.getGrid().checkState(4, 5, 1)),
+                () -> assertEquals(0, convey.getGrid().checkState(0, 1, 1))
         );
     }
 

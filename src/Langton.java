@@ -17,8 +17,8 @@ public class Langton extends Automat {
     }
 
     public static void main(String[] args) {
-        Langton langton = new Langton(20, 20);
-        langton.run("Ant", 100);
+        Langton langton = new Langton(8, 8);
+        langton.run("Ant", 10);
     }
 
     /**
@@ -35,13 +35,29 @@ public class Langton extends Automat {
      * Change state of cell. If was white, change to black and vice versa. Also set new {@code head} for ant
      */
     private void flipCell() {
-        Cell cell = grid.getCell(ypos, xpos);
-        if (cell.isOff()) {
-            cell.turnOn();
-            head = (head + 1) % 4; // turn right
-        } else if (cell.isOn()) {
-            cell.turnOff();
-            head = (head + 3) % 4; // turn left
+        Cell cell = null;
+        try {
+            cell = grid.getCell(ypos, xpos);
+        } catch (IndexOutOfBoundsException e) { // exception handler change position of head if is out of the grid
+            if (ypos == -1) {
+                ypos = grid.numRows() - 1;
+            } else if (ypos == grid.numRows()) {
+                ypos = 0;
+            } else if (xpos == -1) {
+                xpos = grid.numColumns() - 1;
+            } else if (xpos == grid.numColumns()) {
+                xpos = 0;
+            }
+            cell = grid.getCell(ypos, xpos);
+        } finally {
+            assert cell != null;
+            if (cell.isOff()) {
+                cell.turnOn();
+                head = (head + 1) % 4; // turn right
+            } else if (cell.isOn()) {
+                cell.turnOff();
+                head = (head + 3) % 4; // turn left
+            }
         }
     }
 
@@ -50,22 +66,11 @@ public class Langton extends Automat {
      * Directions: 0 - North, 1 - East, 2 - South, 3 - West
      */
     private void moveAnt() {
-        if (head == 0) {
-            if (ypos != 0) {
-                ypos--;
-            }
-        } else if (head == 1) {
-            if (xpos != grid.numColumns() - 1) {
-                xpos++;
-            }
-        } else if (head == 2) {
-            if (ypos != grid.numRows() - 1) {
-                ypos++;
-            }
-        } else {
-            if (xpos != 0) {
-                xpos--;
-            }
+        switch (head) {
+            case 0 -> ypos++;
+            case 1 -> xpos++;
+            case 2 -> ypos--;
+            case 3 -> xpos--;
         }
     }
 }

@@ -167,7 +167,7 @@ public class Convey extends Automat {
      * Helper method in decoding RLE
      *
      * @param code string of code
-     * @param i    index of number which precede last funded o or b
+     * @param i index of number which precede last funded o or b
      * @return integer value of number
      */
     protected int isNumber(StringBuilder code, int i) {

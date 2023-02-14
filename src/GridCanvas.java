@@ -87,16 +87,18 @@ public class GridCanvas extends Canvas {
      * @param r index of row
      * @param c index of column
      * @param state indicate cell state to count
-     * @return 1 when alive, else 0
+     * @return 1 when state same as given state value, otherwise 0
      */
-    public int testIfOn(int r, int c, int state) {
+    public int checkState(int r, int c, int state) {
         try {
             if (grid[r][c].getState() == state) {
                 return 1;
             }
         } catch (IndexOutOfBoundsException e) {
             if (goThroughBorder) {
-                // exception handler which allow to go through grid borders,
+                // exception handler which allow to go through grid borders.
+                // if checkState method trying to get cell which is out of the grid size
+                // this handler maps coordination to opposite side
                 int newR = r;
                 int newC = c;
                 if (r < 0) {
@@ -110,17 +112,18 @@ public class GridCanvas extends Canvas {
                 } else if (c == grid[0].length) {
                     newC = 0;
                 }
-                return testIfOn(newR, newC, state);
+                return checkState(newR, newC, state); // return same method where coordination are mapped
             }
         }
         return 0;
     }
 
     /**
-     * Method count neighbourhoods of all cells of {@code this.grid.grid Cell[][] } field
+     * Method count neighbourhoods of all cells of {@code this.grid.grid Cell[][] } field.
+     * Count cell as a neighborhood only if parameter state is the same as state of separate cell.
      *
-     * @param state indicate cell state to count
-     * @return number of neighbourhoods of each cell
+     * @param state indicate cell state when can be counted
+     * @return number of neighbourhoods of each cell with given state
      */
     public int[][] countNeighbors(int state) {
         int rows = numRows();
@@ -145,14 +148,14 @@ public class GridCanvas extends Canvas {
      */
     public int countNeighbors(int r, int c, int state) {
         int count = 0;
-        count += testIfOn(r - 1, c, state);
-        count += testIfOn(r - 1, c - 1, state);
-        count += testIfOn(r, c - 1, state);
-        count += testIfOn(r + 1, c - 1, state);
-        count += testIfOn(r + 1, c, state);
-        count += testIfOn(r + 1, c + 1, state);
-        count += testIfOn(r, c + 1, state);
-        count += testIfOn(r - 1, c + 1, state);
+        count += checkState(r - 1, c, state);
+        count += checkState(r - 1, c - 1, state);
+        count += checkState(r, c - 1, state);
+        count += checkState(r + 1, c - 1, state);
+        count += checkState(r + 1, c, state);
+        count += checkState(r + 1, c + 1, state);
+        count += checkState(r, c + 1, state);
+        count += checkState(r - 1, c + 1, state);
         return count;
     }
 
