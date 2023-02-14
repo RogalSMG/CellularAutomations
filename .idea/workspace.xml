@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Brian's Brain">
+    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Change name of package">
+      <change afterPath="$PROJECT_DIR$/src/WireWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/wireWorldPatterns/XOR_Gate.wwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/wireWorldPatterns/test.wwp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BrianBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BrianBrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Langton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/GridCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
     </list>
@@ -81,7 +82,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Langton">
+  <component name="RunManager" selected="Application.WireWorld">
     <configuration name="BrianBrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BrianBrain" />
       <module name="GameOfLife" />
@@ -103,11 +104,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WireWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WireWorld" />
       <module name="GameOfLife" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GridCanvasTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Langton" />
+        <item itemvalue="Application.WireWorld" />
         <item itemvalue="Application.BrianBrain" />
+        <item itemvalue="Application.Langton" />
         <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="Application.Convey" />
-        <item itemvalue="JUnit.GridCanvasTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +217,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676361671625</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Descriptions changes">
+      <created>1676372004245</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676372004245</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Brian's Brain changes">
+      <created>1676372058349</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676372058349</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Change name of package">
+      <created>1676372182255</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676372182255</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +257,10 @@
     <MESSAGE value="Encoding RLE" />
     <MESSAGE value="Langton" />
     <MESSAGE value="Brian's Brain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Brian's Brain" />
+    <MESSAGE value="Descriptions changes" />
+    <MESSAGE value="Brian's Brain changes" />
+    <MESSAGE value="Change name of package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change name of package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,7 +275,7 @@
       <configuration name="Application">
         <watch expression="grid" language="JAVA" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="223">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="229">
         <watch expression="list" language="JAVA" />
       </inline-watch>
     </watches-manager>
