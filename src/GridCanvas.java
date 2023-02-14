@@ -61,15 +61,15 @@ public class GridCanvas extends Canvas {
 
     /**
      * Fill whole grid randomly with cells with state 0 or 1
+     * @param down down bound of random number inclusive
+     * @param upper upper bound of random number exclusive
      */
-    public void randomTurning01() {
+    public void randomSetState(int down, int upper) {
         Random r = new Random();
         for (Cell[] row : grid) {
             for (Cell cell : row) {
-                int state = r.nextInt(0, 2);
-                if (state == 1) {
-                    cell.turnOn();
-                }
+                int state = r.nextInt(down, upper);
+                cell.setState(state);
             }
         }
     }
@@ -86,11 +86,12 @@ public class GridCanvas extends Canvas {
      *
      * @param r index of row
      * @param c index of column
+     * @param state indicate cell state to count
      * @return 1 when alive, else 0
      */
-    public int testIfOn(int r, int c) {
+    public int testIfOn(int r, int c, int state) {
         try {
-            if (grid[r][c].isOn()) {
+            if (grid[r][c].getState() == state) {
                 return 1;
             }
         } catch (IndexOutOfBoundsException e) {
@@ -109,42 +110,63 @@ public class GridCanvas extends Canvas {
                 } else if (c == grid[0].length) {
                     newC = 0;
                 }
-                return testIfOn(newR, newC);
+                return testIfOn(newR, newC, state);
             }
         }
         return 0;
     }
 
     /**
-     * Method count alive neighbourhood of specified cell
+     * Method count neighbourhoods of all cells of {@code this.grid.grid Cell[][] } field
      *
-     * @param r index of row
-     * @param c index of column
+     * @param state indicate cell state to count
+     * @return number of neighbourhoods of each cell
+     */
+    public int[][] countNeighbors(int state) {
+        int rows = numRows();
+        int cols = numColumns();
+
+        int[][] counts = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                counts[i][j] = countNeighbors(i, j, state);
+            }
+        }
+        return counts;
+    }
+
+    /**
+     * Method count neighbourhoods cells with indicated state for specified cell
+     *
+     * @param r     index of row
+     * @param c     index of column
+     * @param state indicate cell state to count
      * @return number of alive Cell around specified by r and c
      */
-    public int countNeight(int r, int c) {
+    public int countNeighbors(int r, int c, int state) {
         int count = 0;
-        count += testIfOn(r - 1, c);
-        count += testIfOn(r - 1, c - 1);
-        count += testIfOn(r, c - 1);
-        count += testIfOn(r + 1, c - 1);
-        count += testIfOn(r + 1, c);
-        count += testIfOn(r + 1, c + 1);
-        count += testIfOn(r, c + 1);
-        count += testIfOn(r - 1, c + 1);
+        count += testIfOn(r - 1, c, state);
+        count += testIfOn(r - 1, c - 1, state);
+        count += testIfOn(r, c - 1, state);
+        count += testIfOn(r + 1, c - 1, state);
+        count += testIfOn(r + 1, c, state);
+        count += testIfOn(r + 1, c + 1, state);
+        count += testIfOn(r, c + 1, state);
+        count += testIfOn(r - 1, c + 1, state);
         return count;
     }
 
     /**
-     * Method count all alive cells
+     * Method count all cells of specified state.
      *
+     * @param state indicate cell state to count
      * @return number of alive cells
      */
-    public int countAlive() {
+    public int countState(int state) {
         int count = 0;
         for (Cell[] rows : grid) {
             for (Cell cell : rows) {
-                if (cell.isOn()) {
+                if (cell.getState() == state) {
                     count += 1;
                 }
             }

@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Convey extends Automat {
@@ -11,7 +10,7 @@ public class Convey extends Automat {
      */
     public Convey() {
         grid = new GridCanvas(30, 25, 20);
-        grid.randomTurning01();
+        grid.randomSetState(0,2);
     }
 
     /**
@@ -263,7 +262,7 @@ public class Convey extends Automat {
      * Method simulate one round of Game of life
      */
     public void update() {
-        int[][] counts = countNeighbors();
+        int[][] counts = grid.countNeighbors(1);
         updateGrid(counts);
     }
 
@@ -284,22 +283,4 @@ public class Convey extends Automat {
         }
     }
 
-    /**
-     * Helper
-     * Method count neighbourhoods of all cells of {@code this.grid.grid Cell[][] }field
-     *
-     * @return number of neighbourhoods of each cell
-     */
-    private int[][] countNeighbors() {
-        int rows = grid.numRows();
-        int cols = grid.numColumns();
-
-        int[][] counts = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                counts[i][j] = grid.countNeight(i, j);
-            }
-        }
-        return counts;
-    }
 }
