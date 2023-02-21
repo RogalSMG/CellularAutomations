@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Improvements">
       <change afterPath="$PROJECT_DIR$/src/Ant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CellularAutomations.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Langton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WireWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WireWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wireWorldPatterns/XOR_Gate.wwp" beforeDir="false" afterPath="$PROJECT_DIR$/src/wireWorldPatterns/XOR_Gate.wwp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wireWorldPatterns/test.wwp" beforeDir="false" afterPath="$PROJECT_DIR$/src/wireWorldPatterns/test.wwp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Developer Start\Java Projekty\GameOfLife\src\patterns" />
       <recent name="E:\Developer Start\Java Projekty\GameOfLife\src\r15" />
@@ -85,7 +83,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WireWorld">
+  <component name="RunManager" selected="Application.Langton">
     <configuration name="BrianBrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BrianBrain" />
       <module name="CellularAutomations" />
@@ -139,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Langton" />
         <item itemvalue="Application.WireWorld" />
         <item itemvalue="Application.BrianBrain" />
-        <item itemvalue="Application.Langton" />
         <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="Application.Convey" />
       </list>
@@ -268,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676390628089</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Improvements">
+      <created>1676989022496</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676989022496</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
