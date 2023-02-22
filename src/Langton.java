@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Langton extends Automat {
-    private ArrayList<Ant> ants;
+    private final ArrayList<Ant> ants;
 
 
     /**
-     * Constructs a new langton object. Set number of columns and rows of grid.
+     * Constructs a new Langton object. Set number of columns and rows of grid.
      *
      * @param rows number of rows
      * @param cols number of columns
@@ -15,13 +15,6 @@ public class Langton extends Automat {
         ants = new ArrayList<>();
     }
 
-    /**
-     * Wrapper method for adding
-     * @param ant
-     */
-    public void addAnt(Ant ant) {
-        this.ants.add(ant);
-    }
     /**
      * Create and run simulation
      *
@@ -38,6 +31,15 @@ public class Langton extends Automat {
     }
 
     /**
+     * Wrapper method for adding
+     *
+     * @param ant Ant obj to add
+     */
+    public void addAnt(Ant ant) {
+        this.ants.add(ant);
+    }
+
+    /**
      * Method represent one round of game, flip cell and move. Game rules: <p>
      * - If cell where ant is currently standing is white then change color to black, turn right and move one cell forward.
      * - If cell where ant is currently standing is black then change color to white, turn left and move one cell forward.
@@ -51,6 +53,8 @@ public class Langton extends Automat {
 
     /**
      * Change state of cell. If was white, change to black and vice versa. Also set new {@code head} for ant
+     *
+     * @param ant next ant
      */
     private void flipCell(Ant ant) {
         Cell cell = null;
@@ -82,6 +86,8 @@ public class Langton extends Automat {
     /**
      * Change position of ant
      * Directions: 0 - North, 1 - East, 2 - South, 3 - West
+     *
+     * @param ant next ant
      */
     private void moveAnt(Ant ant) {
         switch (ant.getHead()) {
