@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Many Ants">
+      <change afterPath="$PROJECT_DIR$/src/Coral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/Convey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameOfLife/GridCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Langton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WireWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WireWorld.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +83,14 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="GridCanvas" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Langton">
+  <component name="RunManager" selected="Application.Coral">
     <configuration name="BrianBrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BrianBrain" />
       <module name="CellularAutomations" />
@@ -96,6 +100,13 @@
     </configuration>
     <configuration name="Convey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Convey" />
+      <module name="CellularAutomations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Coral" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Coral" />
       <module name="CellularAutomations" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,23 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridCanvasTest.testCountNeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CellularAutomations" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GridCanvasTest" />
-      <option name="METHOD_NAME" value="testCountNeight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Coral" />
         <item itemvalue="Application.Langton" />
         <item itemvalue="Application.WireWorld" />
-        <item itemvalue="Application.BrianBrain" />
-        <item itemvalue="JUnit.GridCanvasTest.testCountNeight" />
         <item itemvalue="Application.Convey" />
+        <item itemvalue="Application.BrianBrain" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677000320614</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Many Ants">
+      <created>1677078758934</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677078758934</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
