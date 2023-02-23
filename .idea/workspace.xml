@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Many Ants">
-      <change afterPath="$PROJECT_DIR$/src/Coral.java" afterDir="false" />
+    <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Improvements">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Convey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Langton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Langton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WireWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WireWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CellularAutomations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CellularAutomations.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +274,35 @@
       <option name="project" value="LOCAL" />
       <updated>1677078758934</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Make inner Class">
+      <created>1677166754472</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677166754472</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Make inner Class">
+      <created>1677166762456</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677166762456</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Coral Cellular Automaton">
+      <created>1677166782081</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677166782081</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Improvements">
+      <created>1677167079395</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677167079395</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,9 +325,11 @@
     <MESSAGE value="Brian's Brain changes" />
     <MESSAGE value="Change name of package" />
     <MESSAGE value="Wire World" />
-    <MESSAGE value="Improvements" />
     <MESSAGE value="Many Ants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Many Ants" />
+    <MESSAGE value="Make inner Class" />
+    <MESSAGE value="Coral Cellular Automaton" />
+    <MESSAGE value="Improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -318,7 +344,7 @@
       <configuration name="Application">
         <watch expression="grid" language="JAVA" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="229">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="228">
         <watch expression="list" language="JAVA" />
       </inline-watch>
     </watches-manager>
