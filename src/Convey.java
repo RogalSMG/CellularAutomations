@@ -34,9 +34,8 @@ public class Convey extends Automat {
      */
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey();
-        //Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\conveyPatterns\\testing.rle", 1);
-        game.grid.setGoThroughBorder(false);
+        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\conveyPatterns\\151P3H1V0.rle", 2,6);
+        game.grid.setGoThroughBorder(true);
         game.run(title, 6);
     }
 

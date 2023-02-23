@@ -52,7 +52,7 @@ public class GridCanvas extends Canvas {
      * @param g the specified Graphics context
      */
     public void drawForEach(Graphics g) {
-        for (Cell[] row : grid) { // take array of each row of two dimension table
+        for (Cell[] row : grid) { // take array of each row of two dimension board
             for (Cell cell : row) { // take cell of each index of array
                 cell.draw(g); // draw each cell
             }
@@ -98,7 +98,7 @@ public class GridCanvas extends Canvas {
             if (goThroughBorder) {
                 // exception handler which allow to go through grid borders.
                 // if checkState method trying to get cell which is out of the grid size
-                // this handler maps coordination to opposite side
+                // this handler mapped coordination to opposite side
                 int newR = r;
                 int newC = c;
                 if (r < 0) {
@@ -119,11 +119,11 @@ public class GridCanvas extends Canvas {
     }
 
     /**
-     * Method count neighbourhoods of all cells of {@code this.grid.grid Cell[][] } field.
+     * Method count neighbourhoods of all cells of {@code this.grid Cell[][] } field.
      * Count cell as a neighborhood only if parameter state is the same as state of separate cell.
      *
-     * @param state indicate cell state when can be counted
-     * @return number of neighbourhoods of each cell with given state
+     * @param state cell state which will be counted as neighbors.
+     * @return number of neighbors of each cell with given state.
      */
     public int[][] countNeighbors(int state) {
         int rows = numRows();

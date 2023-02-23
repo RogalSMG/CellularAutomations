@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class WireWorld extends Automat {
-    public static Color[] COLORS = {Color.black, Color.BLUE, Color.RED, Color.YELLOW};
+    private final Color[] COLORS = {Color.black, Color.BLUE, Color.RED, Color.YELLOW};
 
     /**
      * Standard constructor
@@ -150,9 +150,5 @@ public class WireWorld extends Automat {
             throw new RuntimeException(e);
         }
         return scan;
-    }
-
-    public static class WireWorldPattern {
-
     }
 }
