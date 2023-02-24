@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;;
 class GridCanvasTest {
 
     GridCanvas gridCanvas = new GridCanvas(10, 10, 20);
-    Convey convey = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\test\\testTestIfOn.cell", 0, 20);
+    Conway conway = new Conway("E:\\Developer Start\\Java Projekty\\GameOfLife\\test\\testTestIfOn.cell", 0, 20);
 
     @BeforeAll
     static void beforeAll() {
@@ -39,27 +39,27 @@ class GridCanvasTest {
     @Test
     void testTestIfOn() {
         assertAll(
-                () -> assertEquals(1, convey.getGrid().checkState(0, 0, 1)),
-                () -> assertEquals(1, convey.getGrid().checkState(0, 2, 1)),
-                () -> assertEquals(1, convey.getGrid().checkState(1, 5, 1)),
-                () -> assertEquals(1, convey.getGrid().checkState(0, 0, 1)),
-                () -> assertEquals(1, convey.getGrid().checkState(4, 5, 1)),
-                () -> assertEquals(0, convey.getGrid().checkState(0, 1, 1))
+                () -> assertEquals(1, conway.getGrid().checkState(0, 0, 1)),
+                () -> assertEquals(1, conway.getGrid().checkState(0, 2, 1)),
+                () -> assertEquals(1, conway.getGrid().checkState(1, 5, 1)),
+                () -> assertEquals(1, conway.getGrid().checkState(0, 0, 1)),
+                () -> assertEquals(1, conway.getGrid().checkState(4, 5, 1)),
+                () -> assertEquals(0, conway.getGrid().checkState(0, 1, 1))
         );
     }
 
     @Test
     void testCountNeight() {
-        convey.grid.setGoThroughBorder(true);
+        conway.grid.setGoThroughBorder(true);
         assertAll(
-                () -> assertEquals(3,convey.getGrid().countNeighbors(0,0, 1)),
-                () -> assertEquals(4,convey.getGrid().countNeighbors(0,1, 1)),
-                () -> assertEquals(1,convey.getGrid().countNeighbors(0,2, 1)),
-                () -> assertEquals(2,convey.getGrid().countNeighbors(0,3, 1)),
-                () -> assertEquals(2,convey.getGrid().countNeighbors(0,4, 1)),
-                () -> assertEquals(2,convey.getGrid().countNeighbors(4,5, 1)),
-                () -> assertEquals(3,convey.getGrid().countNeighbors(1,0, 1)),
-                () -> assertEquals(3,convey.getGrid().countNeighbors(1,1, 1))
+                () -> assertEquals(3, conway.getGrid().countNeighbors(0,0, 1)),
+                () -> assertEquals(4, conway.getGrid().countNeighbors(0,1, 1)),
+                () -> assertEquals(1, conway.getGrid().countNeighbors(0,2, 1)),
+                () -> assertEquals(2, conway.getGrid().countNeighbors(0,3, 1)),
+                () -> assertEquals(2, conway.getGrid().countNeighbors(0,4, 1)),
+                () -> assertEquals(2, conway.getGrid().countNeighbors(4,5, 1)),
+                () -> assertEquals(3, conway.getGrid().countNeighbors(1,0, 1)),
+                () -> assertEquals(3, conway.getGrid().countNeighbors(1,1, 1))
         );
     }
 }

@@ -3,12 +3,12 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Convey extends Automat {
+public class Conway extends Automat {
 
     /**
      * Standard constructor where default all cells are turn off, they can be turned on by hardCoding
      */
-    public Convey() {
+    public Conway() {
         grid = new GridCanvas(30, 25, 20);
         grid.randomSetState(0, 2);
     }
@@ -19,7 +19,7 @@ public class Convey extends Automat {
      * @param path   of file
      * @param margin amount of cell around given pattern
      */
-    public Convey(String path, int margin, int size) {
+    public Conway(String path, int margin, int size) {
         if (path.endsWith("rle")) {
             rleConvey(path, margin, size);
         } else {
@@ -34,7 +34,9 @@ public class Convey extends Automat {
      */
     public static void main(String[] args) {
         String title = "Game Of Life";
-        Convey game = new Convey("E:\\Developer Start\\Java Projekty\\GameOfLife\\src\\conveyPatterns\\151P3H1V0.rle", 2,6);
+        String path = "E:\\Developer Start\\Java Projekty\\CellularAutomations\\src\\conwayPatterns\\gosperGliderGun.rle";
+
+        Conway game = new Conway(path, 2,6);
         game.grid.setGoThroughBorder(true);
         game.run(title, 6);
     }
@@ -49,7 +51,7 @@ public class Convey extends Automat {
      * @param cell  cell to check
      * @param count number of neighbourhoods
      */
-    private static void updateCell(Cell cell, int count) {
+    private void updateCell(Cell cell, int count) {
         if (cell.isOn()) {
             if (count > 3 || count < 2) {
                 cell.turnOff();

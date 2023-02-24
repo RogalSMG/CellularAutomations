@@ -25,7 +25,8 @@ public class GridCanvas extends Canvas {
     }
 
     /**
-     * Setter method for {@code goThroughBorder} field
+     * Setter method for {@code goThroughBorder} boolean type field. <p></>
+     * If set to {@code true} then grid is treated as a borderless and cells will appear on opposite side of grid when encounter a border
      *
      * @param goThroughBorder boolean value to set {@code goThroughBorder}
      */

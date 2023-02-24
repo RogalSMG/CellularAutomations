@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Improvements">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CellularAutomations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CellularAutomations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/151P3H1V0.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/151P3H1V0.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/233P3H1V0.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/233P3H1V0.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/XD.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/XD.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/diamond.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/diamond.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/empty.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/empty.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/glider.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/glider.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/glider.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/glider.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/gosperGliderGun.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/gosperGliderGun.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/pulsar.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/pulsar.cells" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/testing.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/testing.rle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ConveyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ConwayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/GridCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +63,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Developer Start/Java Projekty/GameOfLife/src/patterns&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Developer Start/Java Projekty/CellularAutomations&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -86,7 +99,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Coral">
+  <component name="RunManager" selected="Application.Conway">
     <configuration name="BrianBrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BrianBrain" />
       <module name="CellularAutomations" />
@@ -94,8 +107,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Convey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Convey" />
+    <configuration name="Conway" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Conway" />
       <module name="CellularAutomations" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,10 +137,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Conway" />
         <item itemvalue="Application.Coral" />
         <item itemvalue="Application.Langton" />
         <item itemvalue="Application.WireWorld" />
-        <item itemvalue="Application.Convey" />
         <item itemvalue="Application.BrianBrain" />
       </list>
     </recent_temporary>
@@ -302,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677167079395</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Improvements">
+      <created>1677167890873</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677167890873</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,7 +364,7 @@
       <configuration name="Application">
         <watch expression="grid" language="JAVA" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Convey.java" line="228">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Conway.java" line="228">
         <watch expression="list" language="JAVA" />
       </inline-watch>
     </watches-manager>
