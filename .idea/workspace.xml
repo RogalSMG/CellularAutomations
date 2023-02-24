@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6e19a6-9d25-45bd-9a6d-faeeec48cfe7" name="Changes" comment="Improvements">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Convey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GridCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/151P3H1V0.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/151P3H1V0.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/233P3H1V0.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/233P3H1V0.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/XD.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/XD.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/diamond.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/diamond.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/empty.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/empty.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/glider.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/glider.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/glider.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/glider.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/gosperGliderGun.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/gosperGliderGun.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/pulsar.cells" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/pulsar.cells" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conveyPatterns/testing.rle" beforeDir="false" afterPath="$PROJECT_DIR$/src/conwayPatterns/testing.rle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ConveyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ConwayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GridCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GridCanvasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677167890873</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Improvements">
+      <created>1677234827821</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677234827821</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
