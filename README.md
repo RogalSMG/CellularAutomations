@@ -1,3 +1,7 @@
+<<<<<<<<< Temporary merge branch 1
+# CellularAutomations
+* Automation
+=========
 # Cellular automations
 This project contain implementation some of the most popular Cellular automation in `Java` language
 ## Brain's Brain
@@ -9,3 +13,7 @@ This project contain implementation some of the most popular Cellular automation
 ## Wire World
 
 ## Coral
+
+
+
+>>>>>>>>> Temporary merge branch 2
